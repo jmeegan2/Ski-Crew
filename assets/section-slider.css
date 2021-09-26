@@ -1,0 +1,157 @@
+.slideshow-section {
+    padding-bottom: $section-spacing-small;
+  
+    @include at-query($min, $large) {
+      padding-bottom: 0;
+    }
+  }
+  
+  .flexslider {
+    margin: 0;
+    padding: 0;
+    overflow: visible !important;
+  }
+  
+  .flexslider--adapt,
+  .flexslider--adapt .flex-viewport {
+    max-height: 90vh;
+  }
+  
+  .flexslider--adapt.flexslider--slide .slides {
+    max-height: 90vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .flexslider li {
+    margin: 0;
+    max-width: 100%;
+  }
+  
+  .flexslider {
+    .slides__slide {
+      display: none; /* Hide the slides before the JS is loaded. Avoids image jumping */
+      margin: 0;
+      position: relative;
+      @include backface();
+    }
+  }
+  
+  .flexslider--adapt {
+    .slides__slide {
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+  
+  .flexslider--adapt.flexslider--fade {
+    .slides__slide {
+      position: absolute !important;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+  
+  .slide-hide,
+  .slide-hide > img {
+    height: 1px;
+  }
+  
+  .slide-hide .slides__image,
+  .slide-hide .placeholder-svg {
+    display: none;
+  }
+  
+  .slides__image {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .flexslider--adapt .slides__image,
+  .flexslider--adapt .placeholder-svg {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .slides { @include clearfix; }
+  html[xmlns] .slides { display: block; }
+  * html .slides { height: 1%; }
+  
+  /*================ No JS Fallback ================*/
+  .no-js .slides > li:first-child { display: block; }
+  .flexslider { position: relative; zoom: 1; }
+  .flex-viewport { max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
+  .loading .flex-viewport { max-height: 300px; }
+  .flexslider .slides { zoom: 1; }
+  .carousel li { margin-right: 5px; }
+  
+  /*================ Controls ================*/
+  .slider__controls-container {
+    position: relative;
+  }
+  
+  .slider__controls-button {
+    width: $button-size;
+    height: $button-size;
+    position: absolute;
+    margin: 3px 0;
+    border-style: none;
+    background: transparent;
+  
+    .icon {
+      font-size: 0.7rem;
+      color: $colorPrimary;
+      opacity: 1;
+      @include transition(opacity 0.3s ease-out);
+    }
+  
+    &:hover .icon {
+      opacity: 0.5;
+    }
+  }
+  
+  .slider__controls-button--pause {
+    right: -15px;
+  
+    .icon {
+      height: 0.5rem;
+      font-size: 0.5rem;
+    }
+  }
+  
+  .icon-pause {
+    display: block;
+  
+    .is-paused & {
+      display: none;
+    }
+  }
+  
+  .icon-play {
+    display: none;
+  
+    .is-paused & {
+      display: block;
+    }
+  }
+  
+  /*================ Direction Nav ================*/
+  .slider-navigation {
+    position: relative;
+    margin: 0;
+    z-index: 2;
+    list-style: none;
+  
+    li {
+      margin: 0;
+    }
+  }
+  
