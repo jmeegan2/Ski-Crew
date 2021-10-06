@@ -7,8 +7,9 @@
     "colors_outline_button_labels": "#121212",
     "colors_background_1": "#FFFFFF",
     "colors_background_2": "#F3F3F3",
-    "type_header_font": "assistant_n4",
-    "type_body_font": "assistant_n4",
+    "type_header_font": "century_gothic_n4",
+    "type_body_font": "century_gothic_n4",
+    "favicon": "shopify:\/\/shop_images\/2e1a4503821e4e1295ccd05cbe3f012b.png",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -33,8 +34,8 @@
         "settings": {
           "color_scheme": "accent-2",
           "logo": "shopify:\/\/shop_images\/2e1a4503821e4e1295ccd05cbe3f012b.png",
-          "logo_width": 100,
-          "logo_position": "top-left",
+          "logo_width": 200,
+          "logo_position": "top-center",
           "menu": "main-menu",
           "show_line_separator": true,
           "enable_sticky_header": true

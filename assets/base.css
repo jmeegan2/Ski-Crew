@@ -1,3 +1,19 @@
+/* .header-wrapper {
+  display: block;
+  position: fixed !important;
+  background-color: rgb(var(--color-background));
+  width: 100% !important;
+} */
+/* You can use this section of code if you would like to make the section bar sticky but right 
+I don't want to */
+
+/* #shopify-section-announcement-bar {
+  z-index: 4;
+  position: fixed !important;
+  width: 100% !important;
+} */
+
+
 /* Color custom properties */
 
 :root,
